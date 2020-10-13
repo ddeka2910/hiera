@@ -1,3 +1,8 @@
+os: linux
+arch:
+ - amd64
+ - ppc64le
+ 
 language: ruby
 sudo: false
 # Travis Ruby 1.9.3 stack is defaulting to version 1.7.6 of bundler
@@ -32,3 +37,14 @@ matrix:
       env: "CHECK=commits"
     - rvm: 1.9.3
       env: "CHECK=commits"
+    - arch: ppc64le
+      - rvm: 2.2.4
+        env: "CHECK=spec"
+    - arch: ppc64le
+      - rvm: 2.1.8
+        env: "CHECK=spec"
+    - arch: ppc64le
+      - rvm: 2.1.8
+        env: "CHECK=commits"
+        
+       
