@@ -27,6 +27,17 @@ env:
   - "CHECK=spec"
   - "CHECK=commits"
 
+jobs:
+  allow_failures:
+    - arch: ppc64le
+      - rvm: 2.2.4
+        env: "CHECK=spec"
+    - arch: ppc64le
+      - rvm: 2.1.8
+        env: "CHECK=spec"
+    - arch: ppc64le
+      - rvm: 2.1.8
+        env: "CHECK=commits"
 matrix:
   exclude:
     - rvm: 2.3.0
@@ -37,14 +48,5 @@ matrix:
       env: "CHECK=commits"
     - rvm: 1.9.3
       env: "CHECK=commits"
-    - arch: ppc64le
-      - rvm: 2.2.4
-        env: "CHECK=spec"
-    - arch: ppc64le
-      - rvm: 2.1.8
-        env: "CHECK=spec"
-    - arch: ppc64le
-      - rvm: 2.1.8
-        env: "CHECK=commits"
         
        
