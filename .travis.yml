@@ -41,12 +41,9 @@ matrix:
 allow_failures:
     - arch: ppc64le
       - rvm: 2.2.4
-        env: "CHECK=spec"
     - arch: ppc64le
       - rvm: 2.1.8
-        env: "CHECK=spec"
     - arch: ppc64le
       - rvm: 2.1.8
-        env: "CHECK=commits"
 
        
